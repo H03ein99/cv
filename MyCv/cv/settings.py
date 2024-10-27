@@ -116,7 +116,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+# تنظیمات استاتیک
+STATIC_URL = '/static/'  # آدرس دسترسی به فایل‌های استاتیک
+STATICFILES_DIRS = [BASE_DIR / "static"]  # مسیر فولدر استاتیک پروژه
+STATIC_ROOT = BASE_DIR / "staticfiles"  # مسیر ذخیره فایل‌های استاتیک در محیط تولید
+
+MEDIA_URL = '/media/'  # آدرس دسترسی به فایل‌های مدیا
+MEDIA_ROOT = BASE_DIR / "media"  # مسیر فولدر مدیا
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
